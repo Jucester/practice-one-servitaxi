@@ -155,15 +155,13 @@ nav {
     }
 }
 
+/* service */
 
-/* About */
-
-
-.about {
+.service {
     background-color: #f2f2f2;
 }
 
-.contenido-about {
+.contenido-serv {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -219,30 +217,30 @@ nav {
     color: rgb(206, 134, 19);
 }
 
-/* Questions */
+/* Offer */
 
-.questions {
+.offer {
     height: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.questions > img {
+.offer > img {
     width: 560px;
 }
 
-.textos-questions {
+.textos-offer {
     margin: 0 0 0 30px;
 }
 
-.textos-questions p {
+.textos-offer p {
     font-weight: 300;
     margin-top: 14px;
     color: rgb(24, 24, 24);
 }
 
-.textos-questions a {
+.textos-offer a {
     margin: 28px 0 0 0;
     width: 130px;
     display: block;
@@ -259,9 +257,9 @@ nav {
 }
 
 
-/* Resultados */
+/* About */
 
-.results {
+.about {
     background: linear-gradient(to right, rgba(67, 67, 67, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%), url(../../public/img/airport-transfer-from-vagar-airport-to-torshavn-hotels.jpg);
     background-position: center;
     background-size: cover;
@@ -270,27 +268,27 @@ nav {
     padding-top: 10px;
 }
 
-.content-results {
+.content-about {
     display: flex;
     justify-content: baseline;
 }
 
-.results-text {
+.about-text {
     width: 50%;
 }
 
-.results-text h4 {
+.about-text h4 {
     color: #f2f2f2;
     font-size: 40px;
 }
 
-.results-text p {
+.about-text p {
     color: #ffff;
     font-weight: 300;
     margin: 30px 0;
 }
 
-.results-text > a {
+.about-text > a {
     margin: 28px 0 0 0;
     width: 130px;
     display: block;
@@ -306,23 +304,23 @@ nav {
     box-shadow: 0 8px 32px rgba(249, 168, 38, .90);
 }
 
-/* Servicios */
+/* Atención */
 
-.services {
+.atencion {
     display: flex;
     justify-content: space-between;
 }
 
-.services > img {
+.atencion > img {
     width: 500px;
 }
 
-.box-skills {
+.box{
     width: 500px;
     margin: 30px 0 0 50px;
 }
 
-.box-skills h2 {
+.box h2 {
     text-align: left;
     font-size: 30px;
     font-weight: 900;
@@ -330,13 +328,13 @@ nav {
     margin-bottom: 10px;
 }
 
-.box-skills i {
+.box i {
     color: #1FDE82;
     font-size: 20px;
     margin-right: 5px;
 }
 
-.box-skills h4 {
+.box h4 {
     
     font-size: 20x;
     background: #f2f2f2;
@@ -346,7 +344,7 @@ nav {
     margin-bottom: 10px;
 }
 
-.box-skills .text {
+.box .text {
     font-size: 15px;
     color: #545454;
     line-height: 30px;
@@ -442,8 +440,41 @@ footer{
 
 @media screen and (max-width: 800px) {
 
+
     .titulo {
         font-size: 45px;
+    }
+
+    /* Menu responsivo */
+    .nav {
+        padding: 0 10px;
+    }
+
+    .menu {
+        position: fixed;
+        background-color: rgba(249, 168, 38, 0.85);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+        transition: ease-in-out .5s;
+    }
+
+    .nav .show {
+        clip-path: circle(141.2% at 100% 0);
+    }
+
+    .nav .menu > a {
+        color: #fff;
+    }
+
+    .hambur {
+        display: block;
     }
 
     .contenido-header {
@@ -461,63 +492,57 @@ footer{
     }
 
 
-        /* About */
+    /* Services */
+
     .benefit {
         width: 45%;
     }
 
 
-    /* Questions */
+    /* Oferta */
 
-    .questions {
+    .offer {
         height: 720px;
         justify-content: space-evenly;
         flex-direction: column;
     }
 
-    .questions > img {
+    .offer > img {
         width: 400px;
     }
 
-    .content-results {
+    /* About */ 
+
+    .content-about {
         flex-direction: column-reverse;
     }
 
-    .results-text > a {
+    .about-text > a {
         margin-bottom: 60px;
     }
 
-    .numbers {
-        width: 100%;
-        
-    }
-
-    .numbers .number h4{
-        font-size: 35px;
-    }
-
-    .results-text {
+    .text {
         width: 100%;
     }
 
-    /* Services */
+    /*  Atencion  */
     
-    .box-skills {
+    .box {
         margin: 0 0 40px 20px;
     }
     
-    .box-skills h2 {
+    .box h2 {
         margin: 0 0 0 40px;
        
     }
 
-    .box-skills h4 {
+    .box h4 {
         font-size: 20px;
         width: 350px;
         margin-right: 10px;
     }
  
-    .services > img {
+    .atencion > img {
         width: 400px;
     }
 
@@ -532,6 +557,10 @@ footer{
         width: 30%;
         margin-top: 10px;
         
+    }
+
+    .footer-dev {
+       text-align: center;
     }
 
     .social i {
@@ -559,7 +588,7 @@ footer{
         font-size: 30px;
     }
     
-
+    /* Mejorar ontenedor en resoluciones muy pequeñas */
     .contenedor {
         width: 100%;
     }
@@ -569,102 +598,72 @@ footer{
         padding: 20px;
     }
 
-    .nav {
-        padding: 0 10px;
-    }
-
-    .menu {
-        position: fixed;
-        background-color: rgba(249, 168, 38, 0.85);
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-evenly;
-        clip-path: circle(0.0% at 100% 0);
-        transition: ease-in-out .5s;
-    }
-
-
-    .nav .show {
-        clip-path: circle(141.2% at 100% 0);
-    }
-
-    .nav .menu > a {
-        color: #fff;
-    }
-
-    .hambur {
-        display: block;
-    }
 
     .contenido-header > img {
         width: 200px;
     }
 
 
-    /* About */
+    /* Services */
 
     .benefit {
         width: 95%;
     }
 
-    /* Questions */
-    .textos-questions {
+    /* Offer */
+    .textos-offer {
         margin: 0 10px;
     }
 
-    .questions > img {
+    .offer > img {
         width: 300px;
     }
 
-    /* Results */
+    /* About */
 
    
-    .results-text  {
+    .about-text  {
         width: 95%;
     }
     
 
-    .results-text h4 {
+    .about-text h4 {
         font-size: 35px;
     }
 
-    .results-text .text {
+    .about-text .text {
         font-size: 13px;
     }
 
 
-    /* Services */
-    .services {
+    /* Atencion */
+    .atencion {
         flex-direction: column-reverse;
     }
 
-    .box-skills {
+    .box {
         width: 100%;
         margin: 0 auto;
     }
-    .box-skills h2 {
+    .box h2 {
         margin: 0 auto;
         width: 100%;
     }
 
-    .box-skills h4 {
+    .box h4 {
         font-size: 16px;
         width: 100%;
         margin: 20px auto;
     }
  
-    .services > img {
+    .atencion > img {
         
         width: 200px;
     }
 
 
     /* Footer */
+
 
     .partFooter {
         width: 95%;
