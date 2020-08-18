@@ -15,7 +15,7 @@
 
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <!-- Nav -->
         <nav>
             <section class="contenedor nav">
@@ -26,11 +26,11 @@
 
                 <!-- Menú -->
                 <div class="menu">
-                    <a href="#"> Inicio </a>
-                    <a href="#"> Sobre nosotros </a>
-                    <a href="#"> Servicios </a>
-                    <a href="#"> Clientes </a>
-                    <a href="#"> Contacto </a>
+                    <a href="#header"> Inicio </a>
+                    <a href="#service"> Servicios </a>
+                    <a href="#about"> Nosotros </a>
+                    <a href="#atencion"> Beneficios </a>
+                    <a href="#contact"> Contacto </a>
                 </div>
                 <!-- Icono Responsivo -->
                 <div class="hambur">
@@ -55,7 +55,7 @@
     </header>
 
     <!-- services -->
-    <section class="service">
+    <section class="service" id="service">
         <div class="contenedor1">
             <h2 class="titulo"> Servicios </h2>
 
@@ -105,7 +105,7 @@
     </section>
 
     <!-- Nosotros -->
-    <section class="about">
+    <section class="about" id="about">
         <div class="contenedor1 content-about">
 
             <section class="about-text" data-aos="fade-left">
@@ -133,27 +133,55 @@
 
 
     <!-- atención -->
-    <section class="atencion contenedor1">
+    <section class="atencion contenedor1" id="atencion">
 
         <img src="public/img/customer_service.svg" alt="" data-aos="fade-up">
         <div class="box">
         
              <h2> Beneficios que ofrecemos: </h2>
 
-            <h4><i class="far fa-check-circle"></i> Somos el Mejor Aliado para que usted esté en el lugar y hora precisa, porque somos puntuales,
+            <h4> Somos el Mejor Aliado para que usted esté en el lugar y hora precisa, porque somos puntuales,
                 nuestros vehículos están en perfectas condiciones, los documentos están en regla y vigentes.</h4>
-            <h4><i class="far fa-check-circle"></i> Las Solicitudes de Servicios son atendidas de forma personalizada, de esta manera garantizamos
+            <h4> Las Solicitudes de Servicios son atendidas de forma personalizada, de esta manera garantizamos
                 máxima calidad de información y prestación de servicios. </h4>
-            <h4><i class="far fa-check-circle"></i>  Nuestro personal está adiestrado en protocolo y trato con el público.</h4>
-            <h4><i class="far fa-check-circle"></i>   Garantizamos seguridad, confiabilidad, responsabilidad y honestidad en el cumplimiento de nuestros
+            <h4> Nuestro personal está adiestrado en protocolo y trato con el público.</h4>
+            <h4>   Garantizamos seguridad, confiabilidad, responsabilidad y honestidad en el cumplimiento de nuestros
                 servicios. </h4>
-            <h4><i class="far fa-check-circle"></i>  Le brindamos apoyo telefónico en caso de que lo solicite</h4>
+            <h4>  Le brindamos apoyo telefónico en caso de que lo solicite</h4>
 
 
         </div>
 
     </section>
 
+    <!-- Contact -->
+
+    <section class="contact" id="contact">
+        <div class="contenedor1 contact-form">
+            <h2 class="titulo"> Contáctanos </h2>
+            <form action="#" mehotd="POST" class="form">
+          
+              <label for="name"> Nombre completo </label>
+              <input type="text" id="name" name="name" placeholder="Nombre completo." class="contact-input">
+          
+              <label for="email"> Email </label>
+              <input type="email" id="email" name="email" placeholder="Email." class="contact-input">
+                
+              <label for="phone"> Teléfono </label>
+              <input type="text" id="phone" name="phone" placeholder="Teléfono." class="contact-input">
+                
+    
+          
+              <label for="subject"> Asunto </label>
+              <textarea id="subject" name="subject" placeholder="Asunto" style="height:100px"  class="contact-input"></textarea>
+          
+              <button type="submit"> Enviar </button>
+          
+            </form>
+        </div>
+    
+    </section>
+ 
 
     <!-- Footer -->
     <footer>
