@@ -1,0 +1,679 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1d273b;
+    font-weight: 300;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+} 
+
+.contenedor1 {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px;
+}
+
+
+
+h1 {
+    font-size: 50px;
+}
+
+
+.titulo {
+    font-size: 50px;
+}
+/* Header */
+
+
+/* Esto es para resolver el nav fixed problem que hace que todos los contenidos de la página suban y pierdan su margin debido a que ahora ignoran el de esta al posicionarse encima*/
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgb(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: .5s ease-in-out; 
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    
+}
+
+.nav .logo {
+    height: 80px;
+}
+
+.nav .logo img {
+    height: 100%;
+    vertical-align: top;
+}
+
+.menu {
+    font-weight: 300;
+}
+
+.nav .menu a {
+    color: #5D6678;
+    text-decoration: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.hambur {
+    width: 80px;
+    height: 80px;
+    display: none;
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.hambur > i {
+    font-size: 25px;
+    line-height: 80px;
+}
+
+.contenido-header {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido-header > img {
+    width: 560px;
+    animation:  ease-in animate 1s;
+}
+
+.textos-header {
+    margin: 0 0 0 30px;
+}
+
+.contenido-header p {
+    font-weight: 300;
+    margin-top: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.contenido-header a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: block;
+    text-decoration: none;
+    background-color: rgb(249, 168, 38);
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(249, 168, 38, .50);
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* About */
+
+
+.about {
+    background-color: #f2f2f2;
+}
+
+.contenido-about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.benefit{
+    width: 29%;
+    background-color: #fff;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding:45px 30px 60px 30px;
+    transition: 0.5s;
+}
+
+.benefit:hover {
+    box-shadow: 0 4px 10px rgba(17, 29, 48, .30);
+}
+
+.benefit > i {
+    font-size: 30px;
+    color: #fff;
+    background: rgb(249, 168, 38);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 50%;
+    box-shadow: 0 8px 32px rgba(168, 113, 23, 0.46);
+}
+
+.benefit > h3 {
+    font-size: 24px;
+    padding-top: 30px;
+}
+
+.benefit > p {
+    font-weight: 300;
+    color: rgb(24, 24, 24);
+    margin-top: 15px;
+    padding-bottom: 20px;
+}
+
+.benefit > a {
+    color: #5D6678;
+    text-decoration: none;
+
+}
+
+.benefit > a:hover {
+    color: rgb(206, 134, 19);
+}
+
+/* Questions */
+
+.questions {
+    height: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.questions > img {
+    width: 560px;
+}
+
+.textos-questions {
+    margin: 0 0 0 30px;
+}
+
+.textos-questions p {
+    font-weight: 300;
+    margin-top: 14px;
+    color: rgb(24, 24, 24);
+}
+
+.textos-questions a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: block;
+    text-decoration: none;
+    background-color: rgb(249, 168, 38);
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(249, 168, 38, .90);
+}
+
+
+/* Resultados */
+
+.results {
+    background: linear-gradient(to right, rgba(67, 67, 67, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%), url(../../public/img/airport-transfer-from-vagar-airport-to-torshavn-hotels.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    padding-top: 10px;
+}
+
+.content-results {
+    display: flex;
+    justify-content: baseline;
+}
+
+.results-text {
+    width: 50%;
+}
+
+.results-text h4 {
+    color: #f2f2f2;
+    font-size: 40px;
+}
+
+.results-text p {
+    color: #ffff;
+    font-weight: 300;
+    margin: 30px 0;
+}
+
+.results-text > a {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: block;
+    text-decoration: none;
+    background-color: rgb(249, 168, 38);
+    color: #fff;
+    padding: 12px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(249, 168, 38, .90);
+}
+
+/* Servicios */
+
+.services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.services > img {
+    width: 500px;
+}
+
+.box-skills {
+    width: 500px;
+    margin: 30px 0 0 50px;
+}
+
+.box-skills h2 {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+
+.box-skills i {
+    color: #1FDE82;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.box-skills h4 {
+    
+    font-size: 20x;
+    background: #f2f2f2;
+    width: 450px;
+    border-radius: 6px;
+    padding: 10px 0 10px 15px;
+    margin-bottom: 10px;
+}
+
+.box-skills .text {
+    font-size: 15px;
+    color: #545454;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+
+
+/* Footer */
+footer{
+    background: #f2f2f2;
+    overflow: hidden;
+}
+
+.footer {
+    padding: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.partFooter {
+    width: 20%;
+    text-align: center;
+}
+
+.partFooter h4 {
+    color: #1d273b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.partFooter img {
+    width: 70%;
+}
+
+.partFooter a {
+    display: block;
+    text-decoration: none;
+    color: #5D6678;
+    font-weight: 300;
+    transition: color .3 ease-in-out;
+    margin-bottom: 10px;
+}
+
+.partFooter a:hover {
+    color: rgb(249, 168, 38);
+}
+
+
+.social i {
+    font-size: 20px;
+    display: inline-block;
+    color: #adb6c7;
+    border: 1px solid #adb6c7;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    line-height: 36px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    margin-right: 5px;
+    transition: all ease-in-out .3s;
+}
+
+.social i:hover {
+    color: #fff;
+    background-color: rgb(249, 168, 38);
+    border: 1px solid rgb(249, 168, 38);
+}
+
+.footer-dev {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 0;
+    overflow: hidden;
+}
+
+.footer-dev p {
+    margin-top: 10px;
+}
+
+
+.footer-dev span {
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+
+    .titulo {
+        font-size: 45px;
+    }
+
+    .contenido-header {
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 720px;
+    }
+
+    .contenido-header > img {
+        width: 400px;
+    }
+
+    .textos-header {
+        margin: 0;
+    }
+
+
+        /* About */
+    .benefit {
+        width: 45%;
+    }
+
+
+    /* Questions */
+
+    .questions {
+        height: 720px;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    .questions > img {
+        width: 400px;
+    }
+
+    .content-results {
+        flex-direction: column-reverse;
+    }
+
+    .results-text > a {
+        margin-bottom: 60px;
+    }
+
+    .numbers {
+        width: 100%;
+        
+    }
+
+    .numbers .number h4{
+        font-size: 35px;
+    }
+
+    .results-text {
+        width: 100%;
+    }
+
+    /* Services */
+    
+    .box-skills {
+        margin: 0 0 40px 20px;
+    }
+    
+    .box-skills h2 {
+        margin: 0 0 0 40px;
+       
+    }
+
+    .box-skills h4 {
+        font-size: 20px;
+        width: 350px;
+        margin-right: 10px;
+    }
+ 
+    .services > img {
+        width: 400px;
+    }
+
+
+    /* Footer */ 
+
+    footer {
+        justify-content: space-evenly;
+    }
+
+    .partFooter {
+        width: 30%;
+        margin-top: 10px;
+        
+    }
+
+    .social i {
+       margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .titulo {
+        font-size: 35px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    .contenido-header {
+        padding: 20px;
+        height: 650px;
+    }
+
+    .textos-header h1 {
+        font-size: 30px;
+    }
+    
+
+    .contenedor {
+        width: 100%;
+    }
+
+    .contenedor1 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .nav {
+        padding: 0 10px;
+    }
+
+    .menu {
+        position: fixed;
+        background-color: rgba(249, 168, 38, 0.85);
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        clip-path: circle(0.0% at 100% 0);
+        transition: ease-in-out .5s;
+    }
+
+
+    .nav .show {
+        clip-path: circle(141.2% at 100% 0);
+    }
+
+    .nav .menu > a {
+        color: #fff;
+    }
+
+    .hambur {
+        display: block;
+    }
+
+    .contenido-header > img {
+        width: 200px;
+    }
+
+
+    /* About */
+
+    .benefit {
+        width: 95%;
+    }
+
+    /* Questions */
+    .textos-questions {
+        margin: 0 10px;
+    }
+
+    .questions > img {
+        width: 300px;
+    }
+
+    /* Results */
+
+   
+    .results-text  {
+        width: 95%;
+    }
+    
+
+    .results-text h4 {
+        font-size: 35px;
+    }
+
+    .results-text .text {
+        font-size: 13px;
+    }
+
+
+    /* Services */
+    .services {
+        flex-direction: column-reverse;
+    }
+
+    .box-skills {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .box-skills h2 {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .box-skills h4 {
+        font-size: 16px;
+        width: 100%;
+        margin: 20px auto;
+    }
+ 
+    .services > img {
+        
+        width: 200px;
+    }
+
+
+    /* Footer */
+
+    .partFooter {
+        width: 95%;
+        margin-bottom: 40px;
+    }
+
+    .partFooter > img {
+        width: 100px;
+    }
+
+
+}
